@@ -11,7 +11,7 @@ We are finding good designer who is ready to work in THE BEST TEAM AND THE MOST 
 3) _You'll get %. It is RISKY, but you can be in THE BEST TEAM IN THE WORLD_
 
 Who we need: **2D/vector-graphic designer PART-TIME. **
--------------------------------------------------------------------------OFF-TOP-------------------------------------------------------------------------
+-----OFF-TOP-------------------------------------------------------------------------
 
 ## README
 
