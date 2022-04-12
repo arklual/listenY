@@ -22,7 +22,7 @@ But not know)) Sorry for trolling you a bit.🤓🙏
 
 **Let's continue with WHY WE WANT TO DO THAT?**
 It is all about money guys💰💰💰)) We wanna become trillionaires so while it is not late you can text us about working with our team)). I think it is good offer.
-_To be honest_ we just think that that is cool. And why we can't do that if we have opportunity. So we just love that and that is all😊
+_To be honest_ we just think that the idea is cool. And why we can't do that if we have opportunity. So we just love that and that is all😊
 
 That's all for now. After som time we will correct this file. 
 
