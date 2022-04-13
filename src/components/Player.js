@@ -1,9 +1,27 @@
 import React, { useState, useRef, useEffect } from "react";
 import { Button } from "react-bootstrap";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faPause, faPlay, faForwardFast, faBackwardFast } from '@fortawesome/free-solid-svg-icons'
+
+function PlayPauseButton({ isPlaying, onClick }) {
+  if (isPlaying) {
+    return (
+      <Button onClick={onClick} variant="primary">
+        <FontAwesomeIcon icon={faPause} />
+      </Button>
+    );
+  } else {
+    return (
+      <Button onClick={onClick} variant="primary">
+        <FontAwesomeIcon icon={faPlay} />
+      </Button>
+    );
+  }
+}
+
 function Player() {
   const [playing, setPlaying] = useState(false);
-  const [trackTitle, setTrackTitle] = useState("Title of track");
-  const [playButtonText, setPlayButtonText] = useState("Pause");
+  const [trackTitle, setTrackTitle] = useState("Track #1");
   const [trackProgress, setTrackProgress] = useState(0);
   const audio = useRef(
     new Audio(
@@ -19,17 +37,10 @@ function Player() {
     if (playing) {
       audio.current.pause();
       setPlaying(false);
-      setPlayButtonText("Play");
     } else {
       audio.current.play();
       setPlaying(true);
-      setPlayButtonText("Pause");
     }
-  };
-  const open = () => {
-    setPlaying(true);
-    setTrackTitle("Track #1");
-    audio.current.play();
   };
   useEffect(() => {
     const interval = setInterval(() => {
@@ -39,25 +50,20 @@ function Player() {
   }, []);
   return (
     <div className="player">
-      <h1>{trackTitle}</h1>
-      <Button onClick={open} variant="primary">
-        Load
-      </Button>
+      <h3 className="title">{trackTitle}</h3>
       <div className="control">
-        <Button variant="primary">Previous</Button>
-        <Button onClick={play} variant="primary">
-          {playButtonText}
-        </Button>
-        <Button variant="primary">Next</Button>
+        <Button variant="primary"><FontAwesomeIcon icon={faBackwardFast}/></Button>
+        <PlayPauseButton onClick={play} isPlaying={playing} />
+        <input
+          min="0"
+          max={duration}
+          value={trackProgress}
+          step="1"
+          className="duration"
+          type="range"
+        ></input>
+        <Button variant="primary"><FontAwesomeIcon icon={faForwardFast}/></Button>
       </div>
-      <input
-        min="0"
-        max={duration}
-        value={trackProgress}
-        step="1"
-        className="duration"
-        type="range"
-      ></input>
     </div>
   );
 }
