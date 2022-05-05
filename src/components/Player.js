@@ -42,6 +42,9 @@ function Player() {
       setPlaying(true);
     }
   };
+  const rewind = (event) => {
+    audio.current.currentTime = event.target.value;
+  }
   useEffect(() => {
     const interval = setInterval(() => {
       setTrackProgress(audio.current.currentTime);
@@ -52,7 +55,7 @@ function Player() {
     <div className="player">
       <h3 className="title">{trackTitle}</h3>
       <div className="control">
-        <Button variant="primary"><FontAwesomeIcon icon={faBackwardFast}/></Button>
+        <Button variant="primary"><FontAwesomeIcon icon={faBackwardFast} /></Button>
         <PlayPauseButton onClick={play} isPlaying={playing} />
         <input
           min="0"
@@ -61,8 +64,9 @@ function Player() {
           step="1"
           className="duration"
           type="range"
+          onChange={rewind}
         ></input>
-        <Button variant="primary"><FontAwesomeIcon icon={faForwardFast}/></Button>
+        <Button variant="primary"><FontAwesomeIcon icon={faForwardFast} /></Button>
       </div>
     </div>
   );

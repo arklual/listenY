@@ -30,6 +30,7 @@ p {
 }
 .player {
   display: flex;
+  position: fixed;
   flex-direction: row;
 }
 .control * {
