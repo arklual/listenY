@@ -1,6 +1,7 @@
 * {
   margin: 0;
   padding: 0;
+  color: #fff;
 }
 body {
   background: rgb(145, 29, 164);
@@ -9,15 +10,6 @@ body {
     rgba(145, 29, 164, 1) 0%,
     rgba(0, 22, 181, 1) 100%
   );
-}
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p {
-  color: #fff;
 }
 .conteiner {
   display: flex;
@@ -32,6 +24,7 @@ p {
   display: flex;
   position: fixed;
   flex-direction: row;
+  margin-bottom: 10px;
 }
 .control * {
   margin: 0 2px;
@@ -43,4 +36,7 @@ p {
 .btn.btn-primary {
   background-color: rgb(216, 0, 119);
   border-color: rgb(216, 0, 119);
+}
+.volume{
+  width: 100px;
 }
