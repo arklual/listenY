@@ -25,6 +25,11 @@ body {
   position: fixed;
   flex-direction: row;
   margin-bottom: 10px;
+  background-color: rgba(0, 0, 0, 0.3);
+  border-style: solid;
+  border-width: 2px;
+  border-color: black;
+  border-radius: 10px;
 }
 .control * {
   margin: 0 2px;
