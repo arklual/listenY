@@ -9,7 +9,7 @@ function App() {
   ]
   return (
     <div className='conteiner'>
-      <Player playlist={playlist}/>
+      <Player/>
     </div>
   );
 }

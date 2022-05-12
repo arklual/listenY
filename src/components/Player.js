@@ -39,7 +39,7 @@ function Player({ playlist = null }) {
   const [trackTitle, setTrackTitle] = useState("Track #" + (currentTrack + 1));
   const [audio] = useState(
     new Audio(
-      playlist === undefined ? "https://stat3.deti-online.com/a/YYHWK6O1qLG-oxHSFd4kwQ/1652216400/files/audioskazki/sarra-anson-10-luntik-pesenka-pro-otvagu.mp3" : playlist[currentTrack]
+      playlist === null ? "https://frigato.ru/uploads/files/2019-07/1562689731_pesenka-pro-otvagu.mp3" : playlist[currentTrack]
     )
   );
   audio.preload = "metadata";
